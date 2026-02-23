@@ -17,6 +17,7 @@ RUN pip install --no-cache-dir torch==2.1.1 --index-url https://download.pytorch
 
 # Install other python dependencies
 COPY requirements.txt .
+RUN pip install --no-cache-dir --force-reinstall numpy==1.26.4
 RUN pip install --no-cache-dir -r requirements.txt
 
 # Create model directories
