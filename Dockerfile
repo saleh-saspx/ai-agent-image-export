@@ -17,8 +17,8 @@ RUN pip install --no-cache-dir torch==2.1.1 --index-url https://download.pytorch
 
 # Install other python dependencies
 COPY requirements.txt .
-RUN pip install --no-cache-dir --force-reinstall numpy==1.26.4
-RUN pip install --no-cache-dir -r requirements.txt
+RUN pip install --default-timeout=1000 --no-cache-dir --force-reinstall numpy==1.26.4
+RUN pip install --default-timeout=5000 --no-cache-dir -r requirements.txt
 
 # Create model directories
 RUN mkdir -p app/models/blip app/models/clip app/models/llm app/models/huggingface app/models/torch
