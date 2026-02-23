@@ -1,0 +1,8 @@
+fastapi==0.104.1
+uvicorn==0.24.0
+python-multipart==0.0.6
+Pillow==10.1.0
+transformers==4.35.2
+open_clip_torch==2.23.0
+llama-cpp-python==0.2.19
+requests==2.31.0
